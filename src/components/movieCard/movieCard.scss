@@ -1,0 +1,37 @@
+.layout {
+  background-color: white;
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+    .rating {
+      display: flex;
+      gap: 1;
+      justify-content: center;
+      align-items: center;
+      span {
+        font-size: 18px;
+        margin-right: 10px;
+      }
+      .icon {
+        color: orange;
+        font-size: 20px;
+      }
+    }
+  }
+  .bottom {
+    margin-top: 15px;
+    display: flex;
+
+    .desc {
+      flex: 2;
+      padding: 0 20px;
+      margin-left: 20px;
+    }
+  }
+}
