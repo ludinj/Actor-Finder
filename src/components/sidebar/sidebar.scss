@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .sidebar {
   background-color: white;
   border-right: 1px solid lightgray;
@@ -8,7 +9,15 @@
   text-align: center;
   align-items: center;
   padding: 10px;
-
+  @include mobile {
+    position: absolute;
+    z-index: 99;
+    border-bottom: 1px solid lightgray;
+    left: -200px;
+    &.open {
+      left: 0;
+    }
+  }
   .info {
     display: flex;
     flex-direction: column;
@@ -34,6 +43,18 @@
       width: 100px;
       border-radius: 5px;
       border: 1px solid rgb(250, 164, 179);
+    }
+  }
+  .arrow {
+    position: absolute;
+    top: 60px;
+    right: -30px;
+    display: none;
+    svg {
+      font-size: 20px;
+    }
+    @include mobile {
+      display: flex;
     }
   }
 }

@@ -26,7 +26,7 @@ const Actor = () => {
         <Layout className="main">
           <Sidebar />
           <Content className="content">
-            <Title>Peliculas:</Title>
+            <Title className="mainTitle">Peliculas:</Title>
             <Divider />
             {actorInfo?.known_for.map((movie) => (
               <MovieCard movie={movie} key={movie.id} />

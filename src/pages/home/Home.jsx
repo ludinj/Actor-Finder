@@ -4,12 +4,13 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { fetchStart, fetchSuccess, fetchError } from "../../redux/actorSlice";
 import { InboxOutlined } from "@ant-design/icons";
-import { Upload, message, Layout, Typography, Button } from "antd";
+import { Upload, message, Layout, Typography, Button, Image } from "antd";
 import "antd/dist/antd.min.css";
 import "./home.scss";
 
 const Home = () => {
   const [actorName, setActorName] = useState("");
+
   const { Title, Text } = Typography;
   const { Dragger } = Upload;
   const navigate = useNavigate();
@@ -26,6 +27,7 @@ const Home = () => {
       //Validacion del archivo
       let isValid = true;
       const allowedFiles = /(.jpg|.JPG|.png|.PNG)$/i;
+
       if (!allowedFiles.exec(file.name)) {
         message.error(
           `${file.name} Archivo no valido porfavor cargue una imagen con formato: "JPG,jpg,PNG,png"`
@@ -39,9 +41,9 @@ const Home = () => {
       if (status === "done") {
         if (info.file.response.actorName) {
           setActorName(info.file.response.actorName);
+
           message.success(`${info.file.name} Cargada con éxito.`);
         } else {
-          console.log(info.file.response);
           message.error("Actor no encontrado pruebe con otra imagen.");
         }
       } else if (status === "error") {
@@ -67,7 +69,6 @@ const Home = () => {
       console.log(error);
     }
   };
-
   return (
     <Layout className="container">
       <Layout className="innerContainer">
@@ -82,6 +83,7 @@ const Home = () => {
             películas ha salido
           </p>
         </Dragger>
+
         <Button
           className="button"
           type="primary"

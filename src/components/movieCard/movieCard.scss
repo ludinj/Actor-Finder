@@ -1,3 +1,4 @@
+@import "../../app.scss";
 .layout {
   background-color: white;
   .top {
@@ -8,6 +9,9 @@
       font-size: 25px;
       font-weight: 500;
       margin-bottom: 0;
+      @include mobile {
+        font-size: 20px;
+      }
     }
     .rating {
       display: flex;
@@ -27,11 +31,13 @@
   .bottom {
     margin-top: 15px;
     display: flex;
-
     .desc {
       flex: 2;
       padding: 0 20px;
       margin-left: 20px;
+      @include mobile {
+        padding: 0;
+      }
     }
   }
 }
