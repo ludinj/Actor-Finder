@@ -4,7 +4,7 @@ import "./movieCard.scss";
 import "antd/dist/antd.min.css";
 import { StarFilled } from "@ant-design/icons";
 const MovieCard = ({ movie }) => {
-  const { Title, Text } = Typography;
+  const { Title, Text, Paragraph } = Typography;
   const { Content } = Layout;
   const img = `https://image.tmdb.org/t/p/w300/${movie.poster_path}`;
 
@@ -20,9 +20,7 @@ const MovieCard = ({ movie }) => {
       <Content className="bottom">
         <Image preview={false} width={120} src={img} />
         <div className="desc">
-          <Text>{movie.overview}</Text>
-          <br />
-          <br />
+          <Paragraph>{movie.overview}</Paragraph>
           <Text style={{ fontWeight: "500" }}>
             Fecha de estreno: {movie.release_date}
           </Text>

@@ -21,7 +21,12 @@ const Home = () => {
     multiple: false,
     action: "https://whois.nomada.cloud/upload", //Fetch actors name
     headers: { Nomada: "MjMzZTRhODEtNjU0ZS00OWVlLWJjYTAtYTcyMThlNjk1NTU3" },
-    style: { width: "800px", backgroundColor: "#F5F5F5", borderRadius: "5px" },
+    style: {
+      width: "100%",
+      padding: "20px",
+      backgroundColor: "#F5F5F5",
+      borderRadius: "5px",
+    },
     height: "300px",
     beforeUpload: (file) => {
       //Validacion del archivo

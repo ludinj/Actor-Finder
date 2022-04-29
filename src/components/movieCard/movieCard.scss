@@ -32,11 +32,16 @@
     margin-top: 15px;
     display: flex;
     .desc {
+      display: flex;
+      flex-direction: column;
       flex: 2;
       padding: 0 20px;
       margin-left: 20px;
+      justify-content: space-between;
+      font-size: 16px;
       @include mobile {
         padding: 0;
+        font-size: 14px;
       }
     }
   }
