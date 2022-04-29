@@ -49,6 +49,7 @@ const Home = () => {
 
           message.success(`${info.file.name} Cargada con éxito.`);
         } else {
+          setActorName("");
           message.error("Actor no encontrado pruebe con otra imagen.");
         }
       } else if (status === "error") {
